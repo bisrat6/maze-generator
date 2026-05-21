@@ -23,6 +23,9 @@ The maze generator utilizes a **stack-based Depth-First Search (DFS)** algorithm
 
 For the visual application, each frame via `requestAnimationFrame` eats one wall and redraws the canvas, revealing the maze incrementally as it forms.
 
+### Bonus Mode: Cycles
+By default, the algorithm generates a "perfect maze". However, the UI includes a **"Cycles" toggle button**. When enabled, the generator has a 1-in-20 (5%) probability at each step to randomly eat an extra adjacent wall. This deliberately breaks the perfect maze rules, creating loops and cycles for a more complex and interconnected map.
+
 ## Solver — Backtracking DFS
 
 The solver uses the same stack-based approach to find the exit:
